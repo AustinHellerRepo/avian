@@ -295,6 +295,7 @@ pub struct SweptCcdSet;
 /// }
 /// ```
 #[derive(Component, Clone, Copy, Debug, Deref, DerefMut, PartialEq, Reflect, From)]
+#[cfg_attr(feature = "serialize", derive(Serialize, Deserialize))]
 #[reflect(Component)]
 #[doc(alias = "SweptCcdPredictionDistance")]
 pub struct SpeculativeMargin(pub Scalar);

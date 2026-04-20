@@ -286,6 +286,7 @@ impl<C: ScalableCollider> Plugin for ColliderBackendPlugin<C> {
 ///
 /// This is useful for filtering collider entities regardless of the [collider backend](ColliderBackendPlugin).
 #[derive(Reflect, Component, Clone, Copy, Debug, Default)]
+#[cfg_attr(feature = "serialize", derive(Serialize, Deserialize))]
 #[reflect(Component, Debug, Default)]
 pub struct ColliderMarker;
 
