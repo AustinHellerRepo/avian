@@ -241,6 +241,8 @@ use dynamics::solver::SolverDiagnostics;
 use parry::query::{
     cast_shapes, cast_shapes_nonlinear, NonlinearRigidMotion, ShapeCastHit, ShapeCastOptions,
 };
+#[cfg(feature = "serialize")]
+use serde::{Serialize, Deserialize}; 
 
 /// A plugin for [Continuous Collision Detection](self).
 pub struct CcdPlugin;

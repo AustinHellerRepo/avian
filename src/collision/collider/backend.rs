@@ -19,6 +19,9 @@ use bevy::{
 };
 use mass_properties::{components::RecomputeMassProperties, MassPropertySystems};
 
+#[cfg(feature = "serialize")]
+use serde::{Serialize, Deserialize}; 
+
 /// A plugin for handling generic collider backend logic.
 ///
 /// - Initializes colliders, handles [`ColliderConstructor`] and [`ColliderConstructorHierarchy`].
